@@ -1,0 +1,33 @@
+public class J1Ran {
+	private String myString=null;
+	int mixer=0;String toUp;char changer = 0;int reverser=0;char revReturn;
+	public String randomizer( String sR){
+		myString=sR;
+		for(int i =0; i<sR.length();i++){  
+			mixer =(int) sR.charAt(i)-(int)(Math.random())+4/2*16+(int)
+					(Math.random()*8-12)-7-25*(int)(Math.random())-45/2;
+			while(mixer>132){
+				mixer--;
+			}
+			while(mixer<65&&mixer>48){
+				mixer++;
+			}
+			while(mixer<=96&&mixer>=91){
+				mixer=88-(int)(Math.random()/2*3);
+			}
+			reverser=mixer;
+					 changer =(char)mixer;
+					  revReturn =(char)reverser;
+					System.out.print(changer);
+					
+		}
+		return "";
+		
+	}
+	public String revsReturn(){
+		System.out.println(" "+myString);
+		return myString;
+	}
+	public static void main(String args[]){
+	}
+}
